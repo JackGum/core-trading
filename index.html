@@ -17,53 +17,13 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fafbfa; color: #333; }
         
         header { background-color: #0b3f27; color: #ffffff; text-align: center; padding: 30px 10px; }
-        header h1 { margin: 0; font-size: 2.5em; color: #ffae; }
+        header h1 { margin: 0; font-size: 2.5em; color: #ffb700; }
         header p { margin: 5px 0 0 0; font-size: 1.1em; color: #a3d65c; font-weight: bold; }
         
         .header-bar { height: 4px; background-color: #ff8200; width: 100%; margin: 0; padding: 0; }
         .header-bar-second { height: 2px; background-color: #ffb700; width: 100%; margin: 0; padding: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
 
         .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        
-        /* LOGIN OVERLAY PANEL */
-        #login-screen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vh;
-            padding: 20px;
-        }
-        .login-card {
-            background-color: #ffffff;
-            border: 3px solid #0b3f27;
-            border-radius: 12px;
-            padding: 30px;
-            width: 100%;
-            max-width: 380px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .login-card h2 { margin-top: 0; color: #115c3a; border-bottom: 2px solid #115c3a; padding-bottom: 8px; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
-        .form-group input { width: 92%; padding: 10px; border: 1px solid #bfd1c7; border-radius: 4px; font-size: 1em; }
-        .form-group input:focus { outline: none; border-color: #ffae; }
-        .login-btn {
-            width: 100%;
-            background-color: #333;
-            color: #ff4500;
-            border: none;
-            padding: 12px;
-            font-size: 1.1em;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .login-btn:hover { background-color: #115c3a; color: #ffae; }
-        .error-msg { color: #ff4500; font-weight: bold; margin-top: 10px; display: none; text-align: center; }
-
-        /* MARKETPLACE CONTENT (HIDDEN BY DEFAULT) */
-        #marketplace-content { display: none; }
 
         /* MAIN CONTENT VIEW STYLES */
         .instructions-box { background-color: #ffffff; border-left: 5px solid #a3d65c; padding: 15px; margin-bottom: 25px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
@@ -80,7 +40,7 @@
         .checkbox-label:hover { background-color: #e5f5ec; }
         .checkbox-label input { margin-right: 10px; transform: scale(1.2); cursor: pointer; }
         
-        .summary-box { background-color: #ffffff; border: 3px solid #0b3f27; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+        .summary-box { background-color: #ffffff; border: 3px solid #0b3f27; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 40px; }
         .summary-box h2 { margin-top: 0; color: #0b3f27; border-bottom: 2px solid #0b3f27; padding-bottom: 8px; }
         
         .selections-list { margin: 15px 0; padding: 0; list-style: none; }
@@ -101,24 +61,7 @@
 
     <div class="container">
 
-        <!-- LOGIN SCREEN INTERFACE -->
-        <div id="login-screen">
-            <div class="login-card">
-                <h2>Floor Access Login</h2>
-                <div class="form-group">
-                    <label for="username">Trader Username</label>
-                    <input type="text" id="username" placeholder="Enter username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Access Pin/Password</label>
-                    <input type="password" id="password" placeholder="Enter password">
-                </div>
-                <button class="login-btn" id="login-submit">Enter Trading Floor</button>
-                <div class="error-msg" id="error-message">Invalid Username or Password!</div>
-            </div>
-        </div>
-
-        <!-- MAIN TRADING MARKETPLACE (CONTAINER) -->
+        <!-- MAIN TRADING MARKETPLACE (OPEN BY DEFAULT) -->
         <div id="marketplace-content">
             <!-- Instructions Box -->
             <div class="instructions-box">
@@ -146,22 +89,63 @@
 
                 <!-- Item 2 Box -->
                 <div class="item-card">
-                    <h3>Mechanical Keyboard</h3>
-                    <img src="keyboard.jpg" alt="Mechanical Keyboard" class="item-pic-new">
+                    <h3>Mechanical Watch</h3>
+                    <img src="watch.jpg" alt="Mechanical Watch" class="item-pic-new">
                     <p style="margin: 0 0 10px 0; font-weight: bold; color: #7f8c8d;">Options Acceptable for Trade:</p>
-                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="30" data-item="Mechanical Keyboard" data-trade="Custom Keycap Set">Custom Keycap Set ($30)</label>
-                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="15" data-item="Mechanical Keyboard" data-trade="Coiled USB Cable">Coiled USB Cable ($15)</label>
-                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="10" data-item="Mechanical Keyboard" data-trade="Switch Puller Tool">Switch Puller Tool ($10)</label>
-                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="25" data-item="Mechanical Keyboard" data-trade="Ergonomic Wrist Rest">Ergonomic Wrist Rest ($25)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="45" data-item="Mechanical Watch" data-trade="Leather Watch Strap">Leather Watch Strap ($45)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="110" data-item="Mechanical Watch" data-trade="Stainless Steel Bracelet">Stainless Steel Bracelet ($110)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="30" data-item="Mechanical Watch" data-trade="Travel Pouch Case">Travel Pouch Case ($30)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="55" data-item="Mechanical Watch" data-trade="Winding Storage Box">Winding Storage Box ($55)</label>
                 </div>
 
                 <!-- Item 3 Box -->
                 <div class="item-card">
-                    <h3>Leather Backpack</h3>
-                    <img src="backpack.jpg" alt="Leather Backpack" class="item-pic-new">
+                    <h3>Leather Jacket</h3>
+                    <img src="jacket.jpg" alt="Leather Jacket" class="item-pic-new">
                     <p style="margin: 0 0 10px 0; font-weight: bold; color: #7f8c8d;">Options Acceptable for Trade:</p>
-                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="10" data-item="Leather Backpack" data-trade="Waterproof Rain Cover">Waterproof Rain Cover ($10)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="35" data-item="Leather Jacket" data-trade="Premium Conditioner Cream">Conditioner Cream ($35)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="80" data-item="Leather Jacket" data-trade="Matching Scarf Set">Matching Scarf Set ($80)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="40" data-item="Leather Jacket" data-trade="Heavy Duty Hanger">Heavy Duty Hanger ($40)</label>
+                    <label class="checkbox-label"><input type="checkbox" class="trade-box" data-price="150" data-item="Leather Jacket" data-trade="Suede Inner Liner Vest">Inner Liner Vest ($150)</label>
+                </div>
+            </div>
 
-                < force refresh >
-                    
-                    
+            <div class="summary-box">
+                <h2>Trading Floor Summary</h2>
+                <div id="empty-message" class="empty-msg">No barter selections made yet. Select items from above to generate a summary balance.</div>
+                <ul id="selections-list" class="selections-list"></ul>
+                <div class="total-row">
+                    Total Dynamic Sum: $<span id="total-sum">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements for the Barter Engine
+        const tradeCheckboxes = document.querySelectorAll('.trade-box');
+        const selectionsList = document.getElementById('selections-list');
+        const emptyMessage = document.getElementById('empty-message');
+        const totalSumDisplay = document.getElementById('total-sum');
+
+        // Real-Time Calculation and Dynamic Summary List Updates
+        function updateSummary() {
+            // Clear current list content
+            selectionsList.innerHTML = "";
+            let currentTotal = 0;
+            let checksCount = 0;
+
+            tradeCheckboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    checksCount++;
+                    const price = parseFloat(checkbox.getAttribute('data-price')) || 0;
+                    const itemName = checkbox.getAttribute('data-item');
+                    const tradeOffer = checkbox.getAttribute('data-trade');
+
+                    currentTotal += price;
+
+                    // Dynamically build the styled summary lists
+                    const li = document.createElement('li');
+                    li.innerHTML = `<span><strong>${itemName}</strong>: ${tradeOffer}</span> <span>$${price}</span>`;
+                    selectionsList.appendChild(li);
+                }
